@@ -6,5 +6,6 @@ venv/
 build/
 dist/
 *.spec
+Calculadora-Windows-x64.zip
 .idea/
 .vscode/
