@@ -1,5 +1,8 @@
 # Calculadora Científica
 
+[![Testes](https://github.com/AurelioM20/Calculadora-Python/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/AurelioM20/Calculadora-Python/actions/workflows/ci.yml)
+[![Licença](https://img.shields.io/github/license/AurelioM20/Calculadora-Python)](LICENSE)
+
 Calculadora científica em Python com **interface gráfica em Flet** e **modo
 terminal (CLI)**. Os dois modos compartilham o mesmo motor de cálculo.
 
@@ -78,11 +81,16 @@ Comandos do terminal: `ajuda`, `modo`, `graus`/`deg`, `rad`/`radianos`,
 
 ```
 Calculadora-Python/
+├── .github/
+│   └── workflows/
+│       └── ci.yml         testes automáticos no GitHub Actions
 ├── calculadora.py         motor de cálculo (AST seguro) + CLI
 ├── calculadora_ui.py      interface gráfica em Flet
 ├── abrir_calculadora.bat  atalho para Windows
 ├── docs/
 │   └── calculadora.png    screenshot da interface
+├── testes/
+│   └── teste_calculadora.py  testes do motor (unittest)
 ├── LICENSE
 ├── requirements.txt
 └── README.md
@@ -93,6 +101,15 @@ entrada do usuário não executa código arbitrário. Funções disponíveis no 
 `sin cos tan asin acos atan sinh cosh tanh sqrt cbrt raiz log ln log2 exp abs
 round floor ceil fact hypot deg rad`, além das constantes `pi e tau phi inf
 ans mem`.
+
+## Testes
+
+```bash
+python -m unittest discover -s testes -v
+```
+
+O GitHub Actions roda esses testes a cada push na `main`, nas versões 3.10 e
+3.13 do Python, além de compilar os dois módulos.
 
 ## Licença
 
