@@ -2,6 +2,7 @@
 
 [![Testes](https://github.com/AurelioM20/Calculadora-Python/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/AurelioM20/Calculadora-Python/actions/workflows/ci.yml)
 [![Licença](https://img.shields.io/github/license/AurelioM20/Calculadora-Python)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/AurelioM20/Calculadora-Python)](https://github.com/AurelioM20/Calculadora-Python/releases/latest)
 
 Calculadora científica em Python com **interface gráfica em Flet** e **modo
 terminal (CLI)**. Os dois modos compartilham o mesmo motor de cálculo.
@@ -64,6 +65,24 @@ fact(5) + 2^10
 Comandos do terminal: `ajuda`, `modo`, `graus`/`deg`, `rad`/`radianos`,
 `historico`/`hist`, `limpar`/`clear`, `m+`, `m-`, `mr`, `mc`, `sair`.
 
+### App para Windows (.exe)
+
+Baixe o zip da **[última release](https://github.com/AurelioM20/Calculadora-Python/releases/latest)**,
+extraia em qualquer pasta e execute `Calculadora.exe`. Não precisa ter Python
+instalado: o pacote já inclui o runtime do Flet e funciona offline.
+
+> O executável não é assinado digitalmente. Na primeira abertura o Windows pode
+> mostrar o SmartScreen — clique em **Mais informações → Executar assim mesmo**.
+
+Para gerar o executável você mesmo:
+
+```cmd
+build_exe.bat
+```
+
+O resultado fica em `dist\Calculadora\Calculadora.exe` (`build/`, `dist/` e o
+`.zip` gerado não entram no repositório).
+
 ## Atalhos de teclado (interface gráfica)
 
 | Tecla | Ação |
@@ -86,7 +105,10 @@ Calculadora-Python/
 │       └── ci.yml         testes automáticos no GitHub Actions
 ├── calculadora.py         motor de cálculo (AST seguro) + CLI
 ├── calculadora_ui.py      interface gráfica em Flet
-├── abrir_calculadora.bat  atalho para Windows
+├── abrir_calculadora.bat  atalho para rodar com Python
+├── build_exe.bat          gera o executável do Windows
+├── assets/
+│   └── icone.ico          ícone do executável
 ├── docs/
 │   └── calculadora.png    screenshot da interface
 ├── testes/
