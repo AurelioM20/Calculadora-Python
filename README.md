@@ -6,6 +6,8 @@ terminal (CLI)**. Os dois modos compartilham o mesmo motor de cálculo.
 - `calculadora.py` — motor de cálculo + CLI
 - `calculadora_ui.py` — interface gráfica (Flet)
 
+![Interface da calculadora](docs/calculadora.png)
+
 ## Recursos
 
 - Operações básicas: `+ - × ÷ % ^`, parênteses e fatorial (`x!`)
@@ -76,9 +78,12 @@ Comandos do terminal: `ajuda`, `modo`, `graus`/`deg`, `rad`/`radianos`,
 
 ```
 Calculadora-Python/
-├── calculadora.py        motor de cálculo (AST seguro) + CLI
-├── calculadora_ui.py     interface gráfica em Flet
-├── abrir_calculadora.bat atalho para Windows
+├── calculadora.py         motor de cálculo (AST seguro) + CLI
+├── calculadora_ui.py      interface gráfica em Flet
+├── abrir_calculadora.bat  atalho para Windows
+├── docs/
+│   └── calculadora.png    screenshot da interface
+├── LICENSE
 ├── requirements.txt
 └── README.md
 ```
@@ -88,3 +93,8 @@ entrada do usuário não executa código arbitrário. Funções disponíveis no 
 `sin cos tan asin acos atan sinh cosh tanh sqrt cbrt raiz log ln log2 exp abs
 round floor ceil fact hypot deg rad`, além das constantes `pi e tau phi inf
 ans mem`.
+
+## Licença
+
+Distribuído sob a licença [MIT](LICENSE).
+
